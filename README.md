@@ -174,11 +174,11 @@ The documentation covers:
 
 ### Widget Development
 
-<img src="screenshots/widget-development.png" alt="Widget Development" width="800"/>
+![Widget Development](https://raw.githubusercontent.com/DarahaasVadlamudi/secure-chat-widget/main/screenshots/widget-development.png)
 
 ### Project Development
 
-<img src="screenshots/widget-project.png" alt="Project Development" width="800"/>
+![Project Development](https://raw.githubusercontent.com/DarahaasVadlamudi/secure-chat-widget/main/screenshots/widget-project.png)
 
 ## Future Improvements
 
