@@ -1,15 +1,12 @@
 # Secure Embeddable Chat Widget
 
-A web-based chat widget designed to be embedded into partner websites
-to enable communication between website visitors and businesses.
+A web-based chat widget designed to be embedded into partner websites to enable communication between website visitors and businesses.
 
 ## Overview
 
-This project implements an embeddable chat widget that can be integrated
-into a partner website using a JavaScript loader.
+This project implements an embeddable chat widget that can be integrated into a partner website using a JavaScript loader.
 
-The widget provides a separate chat interface while communicating with
-backend APIs for widget configuration, session management and messaging.
+The widget provides a separate chat interface while communicating with backend APIs for widget configuration, session management and messaging.
 
 ## Features
 
@@ -26,41 +23,12 @@ backend APIs for widget configuration, session management and messaging.
 
 ## Architecture
 
-```text
-Partner Website
-       |
-       v
-JavaScript Loader
-       |
-       v
-widget-loader.js
-       |
-       | Creates iframe
-       v
-   widget.html
-       |
-       | API Requests
-       v
-   Backend APIs
-       |
-       +----------------+
-       |                |
-       v                v
-Widget Configuration   Chat Session
-                            |
-                            v
-                        Messaging
+The widget follows a simple client-side integration flow:
 
+Partner Website → JavaScript Loader → Widget Interface → Backend APIs
 
-**Important:** There are three backticks before `text` and three after the diagram.
+The JavaScript loader creates the embedded widget and allows the widget to communicate with the backend services.
 
----
-
-## Step 7 — Add the API flow
-
-Paste:
-
-```markdown
 ## API Flow
 
 The widget communicates with the backend through multiple stages:
@@ -79,33 +47,21 @@ Additional application data can be retrieved through APIs for:
 
 ## Embedding the Widget
 
-The widget can be integrated into a partner website using a JavaScript
-script tag.
+The widget can be integrated into a partner website using a JavaScript script tag.
 
 Example:
 
-```html
-<script
-    src="widget-loader.js"
-    async
-    data-widget-id="YOUR_WIDGET_ID"
-    data-position="bottom-left">
-</script>
+    <script src="widget-loader.js"
+            async
+            data-widget-id="YOUR_WIDGET_ID"
+            data-position="bottom-left">
+    </script>
 
+The widget loader is responsible for creating and displaying the embedded widget.
 
-Your original demo uses this same general integration approach with a script tag and widget ID. :contentReference[oaicite:2]{index=2}
-
----
-
-## Step 9 — Add Security
-
-Paste:
-
-```markdown
 ## Security Considerations
 
-Security is an important part of an embeddable widget because it can
-operate across different website origins.
+Security is an important part of an embeddable widget because it can operate across different website origins.
 
 The project considers:
 
@@ -118,33 +74,19 @@ The project considers:
 - API rate limiting
 - Secure cookie configuration
 
-Production credentials and private API information are not included
-in this repository.
+Production credentials and private API information are not included in this repository.
 
 ## Project Structure
 
-```text
-secure-chat-widget/
-│
-├── README.md
-├── LICENSE
-├── .gitignore
-│
-├── docs/
-│   └── API_INTEGRATION_GUIDE.md
-│
-└── screenshots/
-    ├── widget-development.png
-    └── widget-project.png
+The repository contains project documentation and screenshots of the widget development process.
 
+- README.md
+- LICENSE
+- docs/
+- screenshots/
+- screenshots/widget-development.png
+- screenshots/widget-project.png
 
----
-
-## Step 11 — Add technologies
-
-Paste:
-
-```markdown
 ## Technologies
 
 - HTML
@@ -158,7 +100,7 @@ Paste:
 
 Detailed API integration information is available in:
 
-`docs/API_INTEGRATION_GUIDE.md`
+docs/API_INTEGRATION_GUIDE.md
 
 The documentation covers:
 
@@ -174,11 +116,11 @@ The documentation covers:
 
 ### Widget Development
 
-![Widget Development](https://raw.githubusercontent.com/DarahaasVadlamudi/secure-chat-widget/main/screenshots/widget-development.png)
+![Widget Development](screenshots/widget-development.png)
 
 ### Project Development
 
-![Project Development](https://raw.githubusercontent.com/DarahaasVadlamudi/secure-chat-widget/main/screenshots/widget-project.png)
+![Project Development](screenshots/widget-project.png)
 
 ## Future Improvements
 
