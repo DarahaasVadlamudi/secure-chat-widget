@@ -174,11 +174,11 @@ The documentation covers:
 
 ### Widget Development
 
-![Widget Development](screenshots/widget-development.png)
+![Widget Development](./screenshots/widget-development.png)
 
 ### Project Development
 
-![Project Development](screenshots/widget-project.png)
+![Project Development](./screenshots/widget-project.png)
 
 ## Future Improvements
 
